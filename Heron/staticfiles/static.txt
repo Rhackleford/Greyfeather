@@ -1,0 +1,12 @@
+gunicorn greywing.wsgi:application --bind 0.0.0.0:8000
+gunicorn greywing.wsgi:application --bind 0.0.0.0:8000 --daemon
+
+
+# Find the PID of the Gunicorn process
+ps aux | grep gunicorn
+
+# Kill the Gunicorn process (replace <PID> with the actual PID)
+kill <PID>
+
+
+ps aux | grep ':8080'

@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black */
+    color: white;
+    text-align: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: 3px solid white; /* Thick white border */
+    border-radius: 15px; /* Rounded corners */
+    margin: 20px 0; /* Margin top and bottom */
+    box-sizing: border-box; /* Ensures padding is included in width calculation */
+}
+
+header h1, header p {
+    margin: 0; /* Remove default margin from h1 and p */
+    display: inline-block; /* Allows the text to be inline but also block-level for margin and padding */
+    padding: 0.2em 0.5em; /* Padding inside the border */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero {
+    background-image: url('https://www.mopop.org/media/7190/con-air-mopop-nicolas-cage-so-bad-its-good.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 400px; /* Or '50vh', for example, if you want it to be responsive to viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.button-container {
+    text-align: center; /* Center the button horizontally */
+    padding: 20px; /* Add some space around the button */
+}
+
+.cta {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Button padding */
+    text-decoration: none; /* Removes underline from text */
+    border-radius: 5px; /* Rounded corners */
+    font-family: 'Helvetica', sans-serif; /* Font family */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Font weight */
+    border: 2px solid #0056b3; /* Border around the button */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+@media screen and (max-width: 800px) {
+    .hero {
+        /* Reduce the height of the hero section on smaller screens */
+        height: 200px; /* Adjust this value as needed */
+    }
+
+    .button-container {
+        /* Reduce the padding around the button on smaller screens */
+        padding: 10px; /* Adjust this value as needed */
+    }
+}
+
+/* Hover effects for non-touch devices */
+@media (hover: hover) {
+    .cta:hover {
+        background-color: #0056b3; /* Button background color on hover */
+        color: #ffcc00; /* Text color on hover */
+        border-color: #ffcc00; /* Border color on hover */
+        transform: scale(1.1); /* Slightly enlarges the button on hover */
+    }
+}
+
+#gif-container {
+    display: none; /* Initially hide the GIF */
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+#subtitle {
+    color: white; 
+    text-align: center;
+    font-size: 0.8em; 
+    font-weight: normal;
+    margin: 0; /* Align subtitle closely with the header text */
+}
+
+.giphy-embed {
+    width: 100%;
+    max-width: 480px; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.gif-hidden {
+    display: none;
+}
