@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueFeather</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>"Nobody wants to watch perfection."</h1>
+        <p id="subtitle">-Nick Cage</p>
+    </header>
+    <div class="hero">
+        <!-- Background image is set via CSS -->
+    </div>
+    <div class="button-container">
+        <button class="cta" onclick="toggleContent()">New Quote</button>
+    </div>
+    <div id="gif-container" class="gif-hidden">
+        <iframe src="https://giphy.com/embed/Ju7l5y9osyymQ" width="480" height="320" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
+    </div>
+    <audio id="background-music" loop>
+        <source src="https://cdn.glitch.global/d65ab429-a136-4852-81e9-ab4ed411980f/mysong.mp3?v=1711915130721" type="audio/mp3">
+    </audio>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Set the GIF container to be hidden when the page loads.
+        document.getElementById('gif-container').style.display = 'none';
+    });
+
+    function toggleContent() {
+        var gifContainer = document.getElementById('gif-container');
+        var audio = document.getElementById('background-music');
+
+        if (gifContainer.style.display === 'none') {
+            gifContainer.style.display = 'block';
+            audio.play();
+        } else {
+            gifContainer.style.display = 'none';
+            audio.pause();
+        }
+    }
+</script>
+
+</body>
+</html>
